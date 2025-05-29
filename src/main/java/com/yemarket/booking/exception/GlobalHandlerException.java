@@ -3,6 +3,7 @@ package com.yemarket.booking.exception;
 import com.yemarket.booking.exception.custom.DuplicatedUserException;
 import com.yemarket.booking.exception.custom.UserNotFoundException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -21,7 +22,10 @@ public class GlobalHandlerException {
         return errorResponse(ErrorCode.DUPLICATED_USER);
     }
 
-
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<?> methodArgumentNotValidExceptionException(DuplicatedUserException e) {
+        return errorResponse(ErrorCode.INTERNAL_ERROR);
+    }
 
 
     private ResponseEntity<?> errorResponse(ErrorCode code) {

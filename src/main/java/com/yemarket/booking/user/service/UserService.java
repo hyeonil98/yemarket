@@ -4,6 +4,9 @@ import com.yemarket.booking.exception.custom.DuplicatedUserException;
 import com.yemarket.booking.user.domain.User;
 import com.yemarket.booking.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
@@ -29,4 +32,5 @@ public class UserService {
     public User getUser(Long idx) {
         return userRepository.findById(idx).orElseThrow();
     }
+
 }

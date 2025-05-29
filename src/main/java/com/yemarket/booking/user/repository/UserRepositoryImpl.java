@@ -1,5 +1,6 @@
 package com.yemarket.booking.user.repository;
 
+import com.yemarket.booking.user.domain.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
@@ -16,5 +17,11 @@ public class UserRepositoryImpl implements UserCustomRepository {
         ).setParameter("userId", userId)
                 .getSingleResult();
         return count > 0;
+    }
+
+    @Override
+    public User findByUserId(String userId) {
+        String jpql = "SELECT u FROM User u WHERE u.userId = :userId";
+        return em.createQuery(jpql, User.class).setParameter("userId", userId).getSingleResult();
     }
 }
