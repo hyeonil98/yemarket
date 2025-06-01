@@ -23,7 +23,7 @@ public class SecurityConfig {
                                     "/swagger-ui/**",
                                     "/swagger-ui.html"
                             ).permitAll()
-                            .requestMatchers("/login", "/logout", "/register").permitAll()
+                            .requestMatchers("/","/login", "/logout", "/register").permitAll()
                             .requestMatchers("/api/**").permitAll()  // ✅ 모든 API 경로 허용
                             .anyRequest().authenticated();
                 })

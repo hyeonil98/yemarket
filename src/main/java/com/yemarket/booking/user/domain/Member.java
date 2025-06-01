@@ -16,23 +16,21 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Entity
-public class User {
+@Entity(name = "Member")
+public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
 
-    @NotBlank(message = "아이디는 필수입니다.")
-    @Pattern(regexp = "^[a-zA-Z0-9]{5,12}$", message = "아이디는 5~12자의 영문자 또는 숫자여야 합니다.")
-    private String userId;
+    @Email(message = "이메일 형식이 올바르지 않습니다.")
+    private String email;
 
     @NotBlank
     @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",
             message = "비밀번호는 8자 이상이며, 영문자와 숫자를 포함해야 합니다.")
     private String password;
 
-    @Email(message = "이메일 형식이 올바르지 않습니다.")
-    private String email;
+
     private String telNum;
 
     private String address;

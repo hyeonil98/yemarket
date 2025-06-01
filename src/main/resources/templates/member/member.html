@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yemarket 계정관리</title>
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 2rem;
+            width: 320px;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #0074e4;
+            text-align: center;
+        }
+        label {
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            display: block;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 0.6rem;
+            margin-top: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 1.5rem;
+            background: #0074e4;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .checkbox-group {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.3rem 0;
+        }
+        .sns {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+        .sns button {
+            width: auto;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            background: #ddd;
+            color: black;
+        }
+        .profile {
+            text-align: center;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: #ccc;
+            display: block;
+            margin: 0 auto 1rem;
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>yemarket 로그인</h1>
+    <label>이메일<input type="email" placeholder="이메일"></label>
+    <label>비밀번호<input type="password" placeholder="비밀번호"></label>
+    <label><input type="checkbox"> 자동 로그인</label>
+    <button>로그인</button>
+    <div class="sns">
+        <button style="background:#fee500">Kakao</button>
+        <button style="background:#1ec800;color:white;">NAVER</button>
+        <button style="background:#ffffff;border:1px solid #ccc">Google</button>
+    </div>
+</div>
+
+<div class="card">
+    <h1>회원가입</h1>
+    <label>아이디<input type="text" id="" placeholder="이름"></label>
+    <label>비밀번호<input type="password" placeholder="비밀번호"></label>
+    <label>비밀번호 확인<input type="password" placeholder="비밀번호 확인"></label>
+    <label>이메일<input type="email" placeholder="이메일"></label>
+    <label>핸드폰 번호<input type="text" placeholder="핸드폰 번호"></label>
+
+    <div class="checkbox-group">
+        <label><input type="checkbox"> 전체 동의</label>
+        <label><input type="checkbox"> 이용약관 동의 (필수)</label>
+        <label><input type="checkbox"> 개인정보 수집 동의 (필수)</label>
+        <label><input type="checkbox"> 마케팅 수신 동의 (선택)</label>
+    </div>
+    <button>회원가입 완료</button>
+</div>
+
+<div class="card">
+    <h1>마이페이지</h1>
+    <div class="profile">
+        <img src="#" alt="프로필 이미지">
+        <div>홍길동</div>
+        <div>gil@example.com</div>
+        <div style="font-size:0.9rem;color:#666;">회원등급: 일반회원</div>
+    </div>
+    <ul class="nav-list">
+        <li>예약 내역</li>
+        <li>결제 내역</li>
+        <li>찜한 상품</li>
+        <li>리뷰 관리</li>
+        <li>문의내역</li>
+        <li>회원 탈퇴</li>
+    </ul>
+</div>
+</body>
+</html>

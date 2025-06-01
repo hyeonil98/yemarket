@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yemarket 계정관리</title>
+  <link rel="stylesheet" th:href="@{/css/member/member.css}">
+<!--  <link type="text/css" href="/css/user/member.css">-->
+</head>
+<body>
+  <div class="card">
+    <h1>회원가입</h1>
+    <label>이메일<input type="email" class="registerBtn" id="registerEmail" placeholder="이메일" maxlength="30"></label>
+    <p class="alert" style="display: none">올바른 이메일 주소를 입력해주세요.</p>
+
+    <label>비밀번호<input type="password" class="registerBtn" id="registerPw" placeholder="비밀번호" maxlength="16"></label>
+    <p class="alert" style="display: none">8 ~ 16 자의 비밀번호를 입력해주세요.</p>
+
+    <label>비밀번호 확인<input type="password" class="registerBtn" id="registerPwChk" placeholder="비밀번호 확인" maxlength="16"></label>
+    <p class="alert" style="display: none">비밀번호가 일치하지 않습니다.</p>
+
+    <label>핸드폰 번호<input type="text" class="registerBtn" id="registerPhone" placeholder="핸드폰 번호" maxlength="13"></label>
+    <p class="alert" style="display: none">올바른 연락처를 입력해주세요.</p>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox"> 전체 동의</label>
+      <label><input type="checkbox"> 이용약관 동의 (필수)</label>
+      <label><input type="checkbox"> 개인정보 수집 동의 (필수)</label>
+      <label><input type="checkbox"> 마케팅 수신 동의 (선택)</label>
+    </div>
+    <button id="registerSubmitBtn" disabled>회원가입 완료</button>
+  </div>
+  <script th:src="@{/js/member/common.js}"></script>
+  <script th:src="@{/js/member/register.js}"></script>
+</body>
+</html>
